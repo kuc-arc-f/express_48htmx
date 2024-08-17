@@ -6,7 +6,7 @@
 
  date   : 2024/08/17
  
- update :
+ update : 2024/08/18
 
 ***
 
@@ -20,7 +20,7 @@ https://stackblitz.com/~/github.com/kuc-arc-f/express_48htmx
 ***
 ### Related
 
-https://htmx.org
+https://github.com/bluwy/create-vite-extra
 
 ***
 ### example
@@ -64,6 +64,10 @@ yarn dev
 ### blog
 
 
+***
+# License
+
+* MIT
 
 ***
 
