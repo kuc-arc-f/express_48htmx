@@ -3,10 +3,10 @@ import express from 'express';
 const app = express();
 //
 import Top from './pages/App';
-import About from './pages/about';
-import Htmx2 from './pages/Htmx2';
-import Htmx3 from './pages/Htmx3';
-import Htmx4 from './pages/Htmx4';
+//import About from './pages/about';
+//import Htmx2 from './pages/Htmx2';
+//import Htmx3 from './pages/Htmx3';
+//import Htmx4 from './pages/Htmx4';
 //
 import testRouter from './routes/test'; 
 import commonRouter from './routes/commonRouter';
@@ -14,7 +14,7 @@ import commonRouter from './routes/commonRouter';
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
-console.log("env=", import.meta.env.production);
+console.log("env.PROD=", import.meta.env.PROD);
 //
 const errorObj = {ret: "NG", messase: "Error"};
 
@@ -44,7 +44,7 @@ app.get('/about', (req: any, res: any) => {
 app.get('/', (req: any, res: any) => {
   try {
     const htm = Top({});
-console.log(htm);
+    //console.log(htm);
     res.send(htm);
   } catch (error) {
     res.sendStatus(500);
