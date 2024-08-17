@@ -28,11 +28,15 @@ https://github.com/bluwy/create-vite-extra
 
 ***
 ### build
-
+* dev
 ```
 yarn build
 #dev
 yarn dev
+```
+* prod
+```
+yarn build:prod
 ```
 
 ***
