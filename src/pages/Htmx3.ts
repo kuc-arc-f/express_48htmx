@@ -1,9 +1,8 @@
-// post-send, Test
-import Layout from './Layout';
+import renderLayout from './renderLayout';
 //
-export default function Page() {
-  return (
-  <Layout>
+export default function Page(props: any) {
+  const htm = `
+  <div>
     <h1>Htmx3.tsx</h1>
     <form
     hx-post="/api/test/test"
@@ -16,8 +15,10 @@ export default function Page() {
     </form>
     <hr />
     <h3 id="h2">ここに表示</h3>
-  </Layout>
-  )
+  </div>
+  `;
+  //
+  return renderLayout({children: htm, title: "Htmx3"});
 }
 /*
 */

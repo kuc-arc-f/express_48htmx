@@ -18,6 +18,7 @@ export default function Compo(props: any) {
       <a href="/">[ home ]</a>
       <a href="/about">[ about ]</a>
       <a href="/htmx2">[ htmx2 ]</a>
+      <a href="/htmx3">[ htmx3 ]</a>
     </div>
     <hr />        
     ${props.children}

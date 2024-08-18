@@ -5,6 +5,7 @@ const app = express();
 import Top from './pages/App';
 import About from './pages/about';
 import Htmx2 from './pages/Htmx2';
+import Htmx3 from './pages/Htmx3';
 //
 import testRouter from './routes/test'; 
 import commonRouter from './routes/commonRouter';
@@ -23,6 +24,9 @@ app.use('/api/common', commonRouter);
 //MPA
 app.get('/htmx2', (req: any, res: any) => {
   try {res.send(Htmx2({}));} catch (error) { res.sendStatus(500);}
+});
+app.get('/htmx3', (req: any, res: any) => {
+  try {res.send(Htmx3({}));} catch (error) { res.sendStatus(500);}
 });
 app.get('/about', (req: any, res: any) => {
   try {res.send(About({}));} catch (error) { res.sendStatus(500);}
