@@ -1,9 +1,8 @@
-// GET-send, Test
-import Layout from './Layout';
-
-export default function Page() {
-  return (
-  <Layout>
+import renderLayout from './renderLayout';
+//
+export default function Page(props: any) {
+  const htm = `
+  <div>
     <h1>HTMX</h1>
     <button
       hx-get="https://jsonplaceholder.typicode.com/users/1"
@@ -12,10 +11,10 @@ export default function Page() {
       Click
     </button>
     <h3 id="h2">ここに表示</h3>
-  </Layout>
-  )
+  </div>
+  `;
+  //
+  return renderLayout({children: htm, title: "Htmx2"});
 }
 /*
-<a href="/">[ Top ]</a>
-<hr />
 */

@@ -1,12 +1,10 @@
 
-export default function Compo(children) {
-  const html = `
-  <!DOCTYPE html>
-  <html lang="en">
+export default function Compo(props: any) {
+  const html = `<!DOCTYPE html><html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>welcome</title>
+    <title>${props.title}</title>
     <link rel="icon" href="/favicon.ico" type="image/x-icon"></link>
     <script
     src="https://unpkg.com/htmx.org@1.9.10"
@@ -15,10 +13,16 @@ export default function Compo(children) {
     ></script>
   </head>
   <body>
-    ${children}
+    <!-- head_wrap -->
+    <div>
+      <a href="/">[ home ]</a>
+      <a href="/about">[ about ]</a>
+      <a href="/htmx2">[ htmx2 ]</a>
+    </div>
+    <hr />        
+    ${props.children}
     <script type="module" src="/static/entry-client.js"></script>
-  </body>
-  </html>
+  </body></html>
   `
   return html;
 }
