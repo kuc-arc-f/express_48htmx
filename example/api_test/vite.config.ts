@@ -7,6 +7,7 @@ export default defineConfig(async({ mode }) => {
         "process.env.NODE_ENV": '"production"',
       },
       build: {
+        minify: false,
         lib: {
           entry: "./src/entry-client.ts",
           formats: ['es'],
@@ -27,7 +28,5 @@ export default defineConfig(async({ mode }) => {
   }
 })
 /*
-define: {
-  "process.env.NODE_ENV": '"production"',
-},
+formats: ['es', 'cjs'],
 */

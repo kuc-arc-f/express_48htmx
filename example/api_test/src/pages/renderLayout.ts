@@ -1,12 +1,14 @@
 
 let PATH__FAVICON = "/favicon.ico";
 let PATH__ENTRY_CLIENT = "/static/entry-client.js";
+let PATH__CSS_GLOBAL = "/static/style.css";
 //
 export default function Compo(props: any) {
 console.log("renderLayout.env.PROD=", import.meta.env.PROD);
   if(import.meta.env.PROD) {
     PATH__FAVICON = "/public/favicon.ico";
     PATH__ENTRY_CLIENT = "/public/static/entry-client.js";
+    PATH__CSS_GLOBAL = "/public/static/style.css";
   }
   //
   const html = `<!DOCTYPE html><html lang="en">
@@ -14,6 +16,7 @@ console.log("renderLayout.env.PROD=", import.meta.env.PROD);
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>${props.title}</title>
+    <link href="${PATH__CSS_GLOBAL}" rel="stylesheet" /> 
     <link rel="icon" href="${PATH__FAVICON}" type="image/x-icon"></link>
     <script
     src="https://unpkg.com/htmx.org@1.9.10"
@@ -32,7 +35,7 @@ console.log("renderLayout.env.PROD=", import.meta.env.PROD);
     </div>
     <hr />        
     ${props.children}
-    <script type="module" src="${PATH__ENTRY_CLIENT}"></script>
+    <script src="${PATH__ENTRY_CLIENT}"></script>
   </body></html>
   `
   return html;
