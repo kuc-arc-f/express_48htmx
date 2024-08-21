@@ -1,0 +1,30 @@
+{
+  "type": "module",
+  "scripts": {
+    "dev": "NODE_ENV=develop nodemon",
+    "build": "npm run clean && npm run build:server && npm run build:client",
+    "build:test": "npm run clean && npm run build:server && node buildClient.js",
+    "clean": "rimraf dist && rimraf public/static",
+    "build:prod": "NODE_ENV=production npm run clean && npm run build:server && npm run build:client",
+    "build:client": "node buildClient.js",
+    "build:client:test": "vite build --mode client",
+    "build:server": "vite build --ssr src/index.ts --outDir dist",
+    "build:server:test": "vite build --ssr src/entry-server.ts --outDir dist/server",
+    "watch": "npx nodemon",
+    "start": "node dist/index.js",
+    "test": ""
+  },
+  "dependencies": {
+    "axios": "^1.6.5",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.12.7",
+    "nodemon": "^3.0.3",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.10"
+  }
+}
