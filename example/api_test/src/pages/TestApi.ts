@@ -3,7 +3,8 @@ import renderLayout from './renderLayout';
 function LoadList(items: any[]){
   let htm = ""; 
   items.forEach((item: any, index: number) => {
-    htm += `<div key="${index}">
+    htm += `<!-- LoadList -->
+    <div key="${index}">
       <h3 class="text-3xl font-bold">${item.title}</h3>
       <span>ID: ${item.id}, ${item.createdAt}</span>
       <a href="/testapishow/${item.id}">
@@ -25,6 +26,14 @@ export default function Page(props: any) {
   //
   const htm = `
   <div>
+    <!-- load -->
+    <div class="load_wrap d-none">
+      <form hx-post="/api/csr/load_list"
+      hx-trigger="load" hx-target="#resulte_load" >
+        <label>name: </label><br />
+        <input type="text" name="name" value="name123"/>
+      </form>
+    </div>
     <h1>TestApi</h1>
     <hr class="my-2" />
     <form class="my-0"
@@ -58,7 +67,8 @@ export default function Page(props: any) {
     </form>
     <h3 id="resulte_form1" class="d-none"></h3>
     <hr />    
-    ${htmList}
+    <div id="resulte_load"></div>
+    
   </div>
   `;
   //

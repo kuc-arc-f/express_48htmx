@@ -13,6 +13,7 @@ import TestApiIndex from "./pages/TestApi/CrudIndex";;
 //
 import testRouter from './routes/test'; 
 import commonRouter from './routes/commonRouter';
+import csrRouter from './routes/csr';
 //
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -24,6 +25,7 @@ const errorObj = {ret: "NG", messase: "Error"};
 // route
 app.use('/api/test', testRouter);
 app.use('/api/common', commonRouter);
+app.use('/api/csr', csrRouter);
 
 //MPA
 app.get('/testapi', async (req: any, res: any) => {

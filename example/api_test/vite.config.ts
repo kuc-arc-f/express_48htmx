@@ -9,7 +9,7 @@ export default defineConfig(async({ mode }) => {
       build: {
         minify: false,
         lib: {
-          entry: "./src/entry-client.ts",
+          entry: "./src/main.ts",
           formats: ['es'],
           fileName: '[name]',
         },
