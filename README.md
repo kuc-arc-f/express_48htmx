@@ -24,8 +24,9 @@ https://github.com/bluwy/create-vite-extra
 
 ***
 ### example
-
-
+* api_test: API connect example
+* ssr: server render example
+* tailwind: tailwindcss example
 ***
 ### build
 * dev
