@@ -13,6 +13,10 @@
 
 htmx + tailwindcss, example
 
+***
+### related
+
+https://tailwindcss.com/docs/guides/vite
 
 ***
 ### blog 
