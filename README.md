@@ -6,7 +6,7 @@
 
  date   : 2024/08/17
  
- update : 2024/08/24   
+ update : 2024/08/24
 
 ***
 
@@ -27,6 +27,7 @@ https://github.com/bluwy/create-vite-extra
 * api_test: API connect example
 * ssr: server render example
 * tailwind: tailwindcss example
+* simple_auth: auth example, simple 
 ***
 ### build
 * dev
