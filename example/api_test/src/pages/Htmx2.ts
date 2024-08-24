@@ -3,7 +3,7 @@ import renderLayout from './renderLayout';
 export default function Page(props: any) {
   const htm = `
   <div>
-    <h1>HTMX</h1>
+    <h1 class="text-4xl font-bold my-2">HTMX</h1>
     <button
       hx-get="https://jsonplaceholder.typicode.com/users/1"
       hx-target="#h2"
